@@ -9,9 +9,9 @@
  export class AppComponent {
      title = 'ingresoEgresoApp'
      constructor (
-         private auth: AuthService
+         private authService: AuthService
      ){
-         //this.auth.initAuthListener()
+         this.authService.initAuthListener()
      }
 
 
