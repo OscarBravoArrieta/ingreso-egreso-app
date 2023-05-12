@@ -2,11 +2,11 @@
  import { isLoading, stopLoading } from "./ui.actions"
 
  export interface State {
-     isloading: boolean
+     isLoading: boolean
  }
 
  export const initialState: State = {
-     isloading: false,
+     isLoading: false,
  }
 
  const _uiReducer = createReducer(initialState,

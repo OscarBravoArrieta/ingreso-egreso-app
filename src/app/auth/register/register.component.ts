@@ -36,7 +36,7 @@
          })
          this.uiSubscription = this.store.select('ui')
          .subscribe(ui => {
-             this.cargando = ui.isloading
+             this.cargando = ui.isLoading
              console.log('cargando subs')
          })
 
