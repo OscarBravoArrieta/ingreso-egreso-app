@@ -11,11 +11,12 @@
      { path: 'register', component: RegisterComponent},
      {
          path: '',
-         component: DashboardComponent,
-         children: dashboardRoutes,
-         canActivate:[ AuthGuard]
+         //canActivate: [ AuthGuard],
+         canLoad: [ AuthGuard],
+         loadChildren: () => import ('./ingreso-egreso/ingreso-egreso.module').then(m => m.IngresoEgresoModule)
      },
-     { path: '**', redirectTo: ''}
+     { path: '**', redirectTo: ''},
+
 
  ];
 

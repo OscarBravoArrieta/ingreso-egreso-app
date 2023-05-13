@@ -1,12 +1,12 @@
  import { Component, OnDestroy, OnInit } from '@angular/core'
  
- import { AppState } from 'src/app/app.reducer'
  import { Store } from '@ngrx/store'
  import { IngresoEgreso } from 'src/app/models/ingreso-egreso.model'
 
  import { Subscription } from 'rxjs'
  import { IngresoEgresoService } from '../../services/ingreso-egreso.service'
  import Swal from 'sweetalert2'
+import { AppStateWithIngreso } from '../ingreso-egreso.reducer'
 
  @Component({
      selector: 'app-detalle',
@@ -18,7 +18,7 @@
      ingresosSubs: Subscription
 
      constructor(
-         private store: Store<AppState>,
+         private store: Store<AppStateWithIngreso>,
          private ingresoEgresoService: IngresoEgresoService
      ) { }
 
